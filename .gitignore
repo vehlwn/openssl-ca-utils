@@ -1,0 +1,7 @@
+/build*/
+/*.user
+compile_commands.json
+.mypy_cache/
+.vim/
+.cache/
+out/
