@@ -1,0 +1,11 @@
+#!/bin/bash
+readonly CONFIG_DAYS="10000"
+readonly CONFIG_DEFAULT_BITS="4096"
+readonly CONFIG_DEFAULT_MD="sha512"
+readonly CONFIG_DN_C="US"
+readonly CONFIG_DN_ST="New York"
+readonly CONFIG_DN_L="New York"
+readonly CONFIG_DN_O="Org"
+readonly CONFIG_DN_OU="Unit"
+readonly CONFIG_DN_ENAIL="admin@org.com"
+readonly CONFIG_SITE_DNS="org.com"
