@@ -11,39 +11,42 @@ $ cp config-example config
 $ ./generate.sh ca
 Generating CA key and cert...
 Generating a RSA private key
-............................++++
-..........................................................................++++
+..........++++
+............................................................................................................................++++
 writing new private key to 'out/ca/ca.key'
 -----
 Certificate:
     Data:
-        Version: 1 (0x0)
+        Version: 3 (0x2)
         Serial Number:
-            26:0d:50:ed:de:0c:1c:e8:28:fa:07:86:f9:d1:02:d7:80:4e:10:b5
+            35:30:9a:03:89:61:a3:8b:2e:cf:27:51:01:0f:78:1a:9f:dd:89:85
         Signature Algorithm: sha512WithRSAEncryption
         Issuer: C = US, ST = New York, L = New York, O = Org, OU = Unit, emailAddress = admin@org.com, CN = Org
         Validity
-            Not Before: Sep 25 09:19:46 2021 GMT
-            Not After : Feb 10 09:19:46 2049 GMT
+            Not Before: Sep 25 13:44:01 2021 GMT
+            Not After : Feb 10 13:44:01 2049 GMT
         Subject: C = US, ST = New York, L = New York, O = Org, OU = Unit, emailAddress = admin@org.com, CN = Org
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 RSA Public-Key: (4096 bit)
                 Modulus:
-                    00:c7:1d:da:aa:8e:bc:30:09:26:73:63:72:f8:49:
+                    00:96:27:58:3a:31:95:e3:30:cc:5e:7e:99:51:aa:
                     ...
-                    03:79:4d
+                    31:ed:33
                 Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
     Signature Algorithm: sha512WithRSAEncryption
-         3c:7a:5e:82:a7:70:f1:55:da:24:83:9d:e4:a4:16:e9:2c:72:
+         5b:d1:79:0f:84:a6:b3:a5:78:7f:60:ef:81:70:2c:97:4a:a8:
          ...
-         26:ff:7d:d9:17:30:12:f2
+         7f:01:22:21:3c:4f:26:7a
 
 $ ./generate.sh site
 Generating site key and cert...
 Generating a RSA private key
-........................++++
-...........................................................................................++++
+............................++++
+..................................................................................................................................................................................++++
 writing new private key to 'out/org.com/key.pem'
 -----
 Certificate Request:
@@ -54,18 +57,20 @@ Certificate Request:
             Public Key Algorithm: rsaEncryption
                 RSA Public-Key: (4096 bit)
                 Modulus:
-                    00:aa:b1:12:85:50:70:a8:6c:33:07:c5:95:3c:f2:
+                    00:b5:60:cb:2b:1d:2e:90:18:09:87:b7:42:d8:03:
                     ...
-                    04:95:1f
+                    5c:cb:9d
                 Exponent: 65537 (0x10001)
         Attributes:
         Requested Extensions:
             X509v3 Subject Alternative Name: 
                 DNS:org.com
+            X509v3 Basic Constraints: critical
+                CA:FALSE
     Signature Algorithm: sha512WithRSAEncryption
-         39:d3:dc:77:eb:99:54:21:6d:2a:71:ab:b6:6f:82:23:bd:67:
+         29:ea:99:fb:ed:ca:3d:97:e6:40:0d:49:ec:f1:68:53:59:e0:
          ...
-         4e:79:58:04:70:5d:b7:bf
+         48:3b:5a:45:84:49:80:58
 Signature ok
 subject=C = US, ST = New York, L = New York, O = Org, OU = Unit, emailAddress = admin@org.com, CN = org.com
 Getting CA Private Key
@@ -73,26 +78,28 @@ Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number:
-            53:9a:79:aa:3c:2d:c8:89:e9:ae:fa:67:2f:96:87:0a:56:27:82:28
+            3a:e5:f0:84:88:e9:b1:07:a1:03:e1:52:9f:29:9a:cd:b1:93:88:26
         Signature Algorithm: sha512WithRSAEncryption
         Issuer: C = US, ST = New York, L = New York, O = Org, OU = Unit, emailAddress = admin@org.com, CN = Org
         Validity
-            Not Before: Sep 25 09:30:29 2021 GMT
-            Not After : Feb 10 09:30:29 2049 GMT
+            Not Before: Sep 25 13:44:56 2021 GMT
+            Not After : Feb 10 13:44:56 2049 GMT
         Subject: C = US, ST = New York, L = New York, O = Org, OU = Unit, emailAddress = admin@org.com, CN = org.com
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 RSA Public-Key: (4096 bit)
                 Modulus:
-                    00:aa:b1:12:85:50:70:a8:6c:33:07:c5:95:3c:f2:
+                    00:b5:60:cb:2b:1d:2e:90:18:09:87:b7:42:d8:03:
                     ...
-                    04:95:1f
+                    5c:cb:9d
                 Exponent: 65537 (0x10001)
         X509v3 extensions:
             X509v3 Subject Alternative Name: 
                 DNS:org.com
+            X509v3 Basic Constraints: critical
+                CA:FALSE
     Signature Algorithm: sha512WithRSAEncryption
-         53:e5:6e:36:a2:b4:36:60:5a:8f:47:d7:ed:ad:35:d0:1a:96:
+         85:d4:35:fa:1c:1d:ac:dd:46:0b:b5:c6:71:89:fd:87:5e:87:
          ...
-         34:b1:48:df:58:17:12:65
+         f1:3f:6a:f2:00:ab:c2:20
 ```
