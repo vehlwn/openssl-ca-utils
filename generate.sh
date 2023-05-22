@@ -29,7 +29,7 @@ case "$1" in
         "s/<DN_L>/${CONFIG_DN_L}/g" \
         "s/<DN_O>/${CONFIG_DN_O}/g" \
         "s/<DN_OU>/${CONFIG_DN_OU}/g" \
-        "s/<DN_ENAIL>/${CONFIG_DN_ENAIL}/g" \
+        "s/<DN_EMAIL>/${CONFIG_DN_EMAIL}/g" \
         "s/<DN_CN>/${CONFIG_DN_O}/g"
     do
         sed -i "${s}" "${CA_DIR}/ca-req.conf"
@@ -51,7 +51,7 @@ case "$1" in
         "s/<DN_L>/${CONFIG_DN_L}/g" \
         "s/<DN_O>/${CONFIG_DN_O}/g" \
         "s/<DN_OU>/${CONFIG_DN_OU}/g" \
-        "s/<DN_ENAIL>/${CONFIG_DN_ENAIL}/g" \
+        "s/<DN_EMAIL>/${CONFIG_DN_EMAIL}/g" \
         "s/<DN_CN>/${CONFIG_DN_O}/g" \
         "s/<SITE_DNS>/${CONFIG_SITE_DNS}/g"
     do
