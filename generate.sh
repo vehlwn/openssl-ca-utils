@@ -26,7 +26,7 @@ case "$1" in
         s/<DEFAULT_MD>/${CONFIG_DEFAULT_MD}/g;
         s/<DN_COUNTRY>/${CONFIG_DN_COUNTRY}/g;
         s/<DN_ORG>/${CONFIG_DN_ORG}/g;
-        s/<DN_COMMON_NAME>/${CONFIG_DN_COMMON_NAME}/g;
+        s/<DN_CA_COMMON_NAME>/${CONFIG_DN_CA_COMMON_NAME}/g;
         " \
         -i "${CA_DIR}/ca-req.conf"
     openssl req -x509 -new -out "${CA_DIR}/ca.crt" -keyout "${CA_DIR}/ca.key" \
